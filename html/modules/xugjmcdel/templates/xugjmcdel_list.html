@@ -1,0 +1,16 @@
+<table class="outer">
+<tr><th>File Name</th><th>date</th><th>Action</th></tr>
+<{foreach item=item from=$ListData}>
+<tr>
+  <td class="even"><{$item.title}></td>
+  <td class="even"><{'Y/m/d H:i:s'|date:$item.date}></td>
+  <td class="even"><a href='index.php?action=delete&amp;id=<{$item.id}>'>Delete</a></td>
+</tr>
+<{/foreach}>
+</table>
+
+<h4>Do You delete menu cache for theme used xugj_assing?</h4>
+<form method="post" action="index.php?action=deleteall">
+<{xoops_input type=hidden name=id value=$deletedata.id}>
+<input type="submit" name="submitdeleteall" value="DeleteALL" />
+</form>

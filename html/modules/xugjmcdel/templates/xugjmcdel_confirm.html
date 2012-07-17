@@ -1,0 +1,9 @@
+<div class="confirmMsg">
+<h4>Do You delete menu cache for theme used xugj_assing?</h4>
+<div>FileName:<{$deletedata.title}></div>
+<form method="post" action="index.php?action=delete">
+<{xoops_input type=hidden name=id value=$deletedata.id}>
+<input type="submit" name="submitdelete" value="Delete" />
+<input type="button" name="confirm_back" value="<{$smarty.const._CANCEL}>"  onclick="javascript:history.go(-1);" />
+</form>
+</div>
